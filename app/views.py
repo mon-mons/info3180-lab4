@@ -62,9 +62,7 @@ def upload():
 def get_uploaded_images():
     rootdir = os.getcwd()
     filenames = []
-    print(rootdir)
     for subdir, dirs, files in os.walk('app/static/uploads'):
-        print(dirs)
         for name in files:
             print(os.path.join(subdir, name))
             filenames.append("uploads/" + name)
